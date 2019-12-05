@@ -1,0 +1,25 @@
+@mixin button($size: 14px, $background: $purple, $colour: #fff, $hover: #000) {
+    @include font-quicksand($colour, $size);    
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 42px;
+    padding: 0 30px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: $background;
+    border-radius: 4px;
+    background: $background;
+    text-decoration: none;
+    text-transform: capitalize;   
+    @include mq(phone,max) {
+        padding: 0 20px;
+    }
+    &:hover {
+        background: #000;
+    }
+}
+
+.button {
+    @include button();
+}

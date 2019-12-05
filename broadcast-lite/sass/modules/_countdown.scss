@@ -1,0 +1,86 @@
+.cp-masthead__countdown {
+    width: 100%;
+    padding: 20px 0 0;
+    @include mq(tablet,max) {
+        position: absolute;
+        top: 100%;
+        left:0;
+        background: $lightGray;
+        padding: 20px 10px 0;
+    }
+    .online & {
+        display: none;
+    }
+    &-title {
+        width:100%;
+        text-transform: capitalize;
+        text-shadow: 0 0 5px black, 0 0 10px black, 0 0 15px black;
+        @include font-quicksand(#fff,1.25vw, 1.15, 300);
+        text-align: center;
+        @include mq(desktop,max) {
+            font-size: 14px;
+        }
+    }
+    &-wrapper {
+        text-align:center;
+        position: relative;
+        z-index:101;
+        margin: auto;
+        @include font-quicksand();
+    }
+    .timer-inner {
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        .time-container {
+        
+        }
+        .the-time {
+        
+        }
+        .separator {
+            font-size: 4.2vw;
+            line-height: 1;
+            text-shadow: 0 0 5px black, 0 0 10px black, 0 0 15px black;
+            @include mq(desktop,max) {
+                font-size: 44px;
+            }
+        }
+        .item {
+            display:flex;
+            flex-wrap:wrap;
+            text-align:center;
+            position: relative;
+            justify-content: center;
+            padding:0 0 20px;
+            width:10vw;
+            @include mq(desktop,max) {
+                width: 106px;
+                font-size: 16px;
+            }
+            span:not(.label) {
+                font-size:6.667vw;
+                text-shadow: 0 0 5px black, 0 0 10px black, 0 0 15px black;
+                @include mq(desktop,max) {
+                    font-size: 62px;
+                }
+                @include mq(phone,max) {
+                    font-size: 44px;
+                }
+            }
+            .label {
+                font-size: 1.25vw;
+                width:100%;
+                text-transform: capitalize;
+                font-weight: 300;
+                text-shadow: 0 0 5px black, 0 0 10px black, 0 0 15px black;
+                @include mq(desktop,max) {
+                    font-size: 14px;
+                }
+               @include mq(phone,max) {
+                    font-size: 10px;
+                }
+            }
+        }
+    }
+}

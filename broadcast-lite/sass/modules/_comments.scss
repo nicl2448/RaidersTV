@@ -1,0 +1,106 @@
+.cp-single__comments {
+    &-title {
+        display: inline-block;
+        position: relative;
+        @include font-quicksand($white,20px);
+        &:before {
+            @include pseudo();
+            height: 1px;
+            width: 100%;
+            bottom:-10px;
+            left: 0;
+            background-color: $white;
+        }
+    }
+    ol {
+        list-style: none;
+    }
+    &-list {
+        margin: 0;
+        padding: 0;
+        .comment-body {
+            position: relative;
+            font-size: 15px;
+            min-height: 100px;
+            @include mq(phone-wide, max) {
+                min-height: 50px;
+            }
+            
+        }
+        .comment-meta {
+            position: absolute;
+            width: 100%;
+        }
+        .comment-metadata {
+            position: absolute;
+            top:17px;
+            left: 110px;
+            a {
+                font-size: 13px;
+                text-decoration: none;
+            }      
+            @include mq(phone-wide, max) {
+                display: none;
+            }
+        }        
+        .comment-author {
+            b {
+                padding: 0 0 0 4px;
+            }
+            img {
+                display: inline-block;
+                vertical-align: top;
+                @include mq(phone-wide, max) {
+                    width: 50px;
+                    height: 50px;
+                }
+            }
+            .says {
+                @include mq(phone-wide, max) {
+                    display: none;
+                }
+            }
+        }
+        .comment-content {
+            padding: 25px 0 0 110px;
+            @include mq(phone-wide, max) {
+                padding: 8px 0 0 60px;
+            }
+        }
+        .reply {
+            padding: 0 0 0 110px;
+            a {
+                position: relative;
+            }
+            @include mq(phone-wide, max) {
+                padding: 0 0 0 60px;
+            }
+        }
+        label {
+            display: none;
+        }
+    }
+    &-respond-title {
+        display: none;
+    }
+    &-form {
+        label {display: none;}
+        textarea {
+            height: 40px;
+            line-height: 35px;
+            width: 100%;
+            border: solid 1px $white;
+            border-radius: 4px;
+            text-indent: 5px;
+            color: #202020;
+        }
+        #author, #email {
+            height: 40px;
+            border-style: solid;
+            border-width: 1px;
+            border-radius: 4px;
+            text-indent: 5px;
+            color: #202020;
+        }
+    }
+}

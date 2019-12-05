@@ -1,0 +1,32 @@
+.cp-affiliates {
+    // background: $white;
+    &--hide {
+        display: none;
+    }
+    &__title {
+        h3 {
+            color: $darkGray;
+            &:before {
+                background-color: $darkGray;
+            }
+        }
+    }
+    &__wrapper {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        padding: 20px 0;
+        a {
+            max-width: 200px;
+            margin: 0 10px;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+    
+}

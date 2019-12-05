@@ -1,0 +1,17 @@
+/*   
+Theme Name: Broadcast Lite
+Author: StreamWeasels
+Description: Broadcast Lite was built specifically for flawless integration with twitch.tv, mixer.com and youtube.com straight out the box. Let Broadcast be the home for all your stream news and info. Use it to blog, make announcements, let users keep track of your schedule, count down to your next stream and more!
+Version: 1.1.4
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: broadcast-lite
+Tags: full-width-template, custom-menu, theme-options, entertainment, blog
+Theme URI: https://www.streamweasels.com/store/themes/broadcast-lite/
+Author URI: https://www.streamweasels.com
+*/
+
+/* The below empty styles added to pass Theme Check only. Check /sass/ folders for the actual styles (outputs to /dist/) */
+.sticky {}
+.gallery-caption {}
+.bypostauthor {}

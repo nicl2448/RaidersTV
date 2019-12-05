@@ -1,0 +1,55 @@
+// * EXAMPLE for Typography *
+ @mixin font-quicksand($colorValue:$white, $sizeValue:16px, $lineHeight: 16px, $fontWeight:400) { //example @include font-market($color-brand-blu, 28, center);
+   font-family: 'Quicksand', sans-serif !important;
+   @if $colorValue != 'none' { color: ($colorValue); }
+   font-size: ($sizeValue);
+   font-style: normal;
+   font-weight: ($fontWeight);
+   letter-spacing: 1px;
+ }
+ 
+  @mixin font-khand($colorValue:white, $sizeValue:16px, $fontWeight:300) { //example @include font-market($color-brand-blu, 28, center);
+   font-family: 'Khand', sans-serif !important;
+   color: ($colorValue);
+   font-size: ($sizeValue);
+   font-style: normal;
+   font-weight: ($fontWeight);
+   letter-spacing: 0.5px;
+ }
+
+@mixin pseudo($display: block, $pos: absolute, $content: ''){
+    content: $content;
+    display: $display;
+    position: $pos;
+}
+
+$breakpoints: (
+ "phone":        400px,
+ "phone-wide":   480px,
+ "phablet":      560px,
+ "tablet-small": 640px,
+ "tablet":       768px,
+ "adminbar":     782px,
+ "tablet-wide":  1024px,
+ "desktop":      1248px,
+ "desktop-wide": 1440px
+);
+
+// * EXAMPLE for Medoa Querying *
+ @mixin mq($width, $type: min) {
+   @if map_has_key($breakpoints, $width) {
+     $width: map_get($breakpoints, $width);
+     @if $type == max {
+       $width: $width - 1px;
+     }
+     @media only screen and (#{$type}-width: $width) {
+       @content;
+     }
+   }
+ }
+//
+////COMPILED OUTPUT
+// @media only screen and (max-width: 1247px) {
+//   //content
+//   font-size: 2em;
+//}

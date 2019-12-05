@@ -1,0 +1,41 @@
+.cp-single {
+    //background: $darkGray;
+    &__inner {
+    
+    }
+    article {
+        margin: 0 0 30px;
+    }
+    .post-tags {
+        list-style: none;
+        padding: 0;
+        li {
+            margin: 0 8px 0 0;
+            display: inline-block;
+        }
+    }
+    .post-categories {
+
+        li {
+
+        }
+    }
+    &__meta {
+        
+        &-title {
+            @include font-quicksand(none);
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+            display: inline-block;
+            li {
+                margin: 0 8px 0 0;
+                display: inline-block;
+                a {
+                    color: $purple;
+                }
+            }
+        }
+    }    
+}

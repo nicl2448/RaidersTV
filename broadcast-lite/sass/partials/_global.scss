@@ -1,0 +1,78 @@
+// html, body { }
+//
+// a {  }
+//
+// blockquote {  }
+//
+// canvas {  }
+//
+// dialog {  }
+//
+// fieldset {  }
+//
+// form {  }
+//
+// input {  }
+//
+// label {  }
+//
+// noscript {  }
+//
+// span {  }
+//
+// strong {  }
+//
+// table {  }
+//
+// thead {  }
+//
+// tfoot {  }
+//
+// textarea {  }
+
+body {
+    transition: right .3s ease;
+    right:0;
+    &.nav-open {
+        right: 320px;
+    }
+}
+
+.l-inner {
+    margin: 0 auto;
+    max-width: 1440px;
+    padding: 0 30px;
+    @include mq(tablet-wide,max) {
+        padding: 0 20px;
+    }
+    @include mq(tablet-small,max) {
+        padding: 0 10px;
+    }
+}
+
+.l-indicator {
+    top: 50%;
+    left:0;
+    transform: translateY(-3px);
+    position: absolute;
+    border-radius: 100%;
+    background-color: transparent;
+    height: 10px;
+    width: 10px;
+    border: 1px solid #D64541;
+    .online & {
+        border-color:#2ecc71;
+        &:before {
+            @include pseudo();
+            position: absolute;
+            border-radius: 100%;
+            background-color: transparent;
+            height: 10px;
+            width: 10px;
+            left:-1px;
+            top:-1px;
+            border: 1px solid #2ecc71;
+            animation: online 2s infinite; 
+        }
+    }
+}

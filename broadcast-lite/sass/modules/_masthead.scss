@@ -1,0 +1,99 @@
+.cp-masthead {
+    position: relative;
+    .countdown & {
+        @include mq(tablet,max) {
+            margin: 0 0 143px;
+        }
+        @include mq(phone,max) {
+            margin: 0 0 117px;
+        }
+    }
+    .countdown.online & {
+        margin: 0!important;
+    }
+    img {
+        width: 100%;
+        height: auto;
+        vertical-align: top;
+    }
+    &__wrapper {
+        position: absolute;
+        top:0;
+        left:0;
+        right:0;
+        bottom:0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 80px 0 0;
+        @include mq(tablet,max) {
+            padding:0;
+        }
+        .cp-masthead--countdown & {
+//            @include mq(desktop,max) {
+//                justify-content: flex-end;
+//            }
+        }
+    }
+    &__logo {
+        max-width: 300px;
+        width: 20vw;
+        margin: 20px 0;
+        img {
+            width: 100%;
+            height: auto;
+        }
+        @include mq(phone,max) {
+            display: none;
+        }
+        &--border {
+            border: solid 3px $purple;
+            border-radius: 50%;
+            overflow: hidden; 
+        }
+    }
+    &__cta {
+        display: none;
+        margin: 20px 0;
+        @include mq(tablet,max) {
+            position: absolute;
+            bottom: 10px;
+            right:10px;
+            margin:0;
+        }
+        .online & {
+            display: block;
+        }
+        &-title {
+            @include font-quicksand($white, 24px, 1.15, 400);
+            text-shadow: 0 0 5px black, 0 0 10px black, 0 0 15px black;
+            text-align: center;
+            margin: 0 0 10px;
+            @include mq(tablet,max) {
+                display: none;
+            }
+        }
+        a {
+            position: relative;
+            z-index: 100;
+            font-size: 20px;
+            background: $darkGray;
+            @include mq(phone,max) {
+                font-size: 14px;
+            }
+            &:hover {
+                background: $purple;
+                border-color: $darkGray;
+            }
+        }
+    }
+    &__vignette {
+        position: absolute;
+        top:0;
+        left:0;
+        right:0;
+        bottom:0;
+        background: radial-gradient(ellipse at center, transparent 0%, rgba(0,0,0,0) 45%, #000 100%);
+    }
+}

@@ -1,0 +1,42 @@
+.cp-footer {
+    //background: $darkGray;
+    &__social {
+        display:flex;
+        flex-wrap:wrap;
+        justify-content: center;
+        padding: 20px 0 0;
+        a {
+            text-decoration: none;
+            color: #fff;
+            width: 35px;
+            height: 35px;
+            font-size: 22px;
+            div {
+                width: 35px;
+                height: 35px; 
+                display: inline-flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+        .icon-instagram { background-color:#000; }
+        .icon-facebook { background-color:#4c67a1; }
+        .icon-twitch { background-color:#7550ba; }
+        .icon-twitter { background-color:#1b9ae7; }
+        .icon-google-plus { background-color:#dc4a3d; }
+        .icon-youtube { background-color:#de2925; }
+        .icon-mixer {background-color:  #002050;}
+        .icon-discord {background-color:  #7289DA;font-size: .8em;}
+        .icon-tumblr {background-color:  #44AFFE;}
+        .icon-linkedin2 {background-color:  #2171B3;}
+        .icon-pinterest2 {background-color:  #B50912;}
+    }
+    &__copyright {
+        padding: 0 0 10px;
+        text-align: center;
+    }
+}
+.social { padding: 1.2em 0; text-align: center; width:100%; height: 100%; }
+.social a { text-decoration: none; }
+.social * { color:#fff; width: 35px; height: 100%; height: 35px; align-items: center; display: inline-flex!important; text-align: center; }
+.social *:before { width: 100%; }
